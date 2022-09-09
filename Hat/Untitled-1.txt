@@ -1,0 +1,25 @@
+<?php
+
+$servername = "localhost";
+$username = "san";
+$password = "yAH00thing$";
+$dbname = "san";
+
+// Create connection
+$conn = new mysqli($servername,
+	$username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: "
+		. $conn->connect_error);
+}
+
+$sqlquery = "INSERT INTO table VALUES
+	('Ali', 'Rash', '+2349012345678', 'ali@example.com', 'IT Support', 'kano')"
+
+if ($conn->query($sql) === TRUE) {
+	echo "record inserted successfully";
+} else {
+	echo "Error: " . $sql . "<br>" . $conn->error;
+}
